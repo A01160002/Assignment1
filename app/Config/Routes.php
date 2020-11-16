@@ -32,6 +32,7 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Employees::index');
 $routes->get('/image/(:any)', 'Media::image/$1');
+$routes->get('/heroes', 'Employees::index');
 
 /**
  * --------------------------------------------------------------------
