@@ -19,12 +19,12 @@ namespace App\Controllers;
          $table = new \CodeIgniter\View\Table();
 
          $headings = $employees->fields;
-         $displayHeadings = array_slice($headings, 1, 2);
+         $displayHeadings = [$headings[1],$headings[3]];
          $table->setHeading(array_map('ucfirst', $displayHeadings));
          
          foreach ($records as $record) {
              $nameLink = anchor("employees/showme/$record->id",$record->name);
-             $table->addRow($nameLink,$record->nationality);
+             $table->addRow($nameLink,"<img src=\"/image/".$record->image."\"/>");
          }
          
          $template = [
@@ -79,7 +79,7 @@ namespace App\Controllers;
          $template = [
              'table_open' => '<table cellpadding="10px">',
              'cell_start' => '<td style="border: 5px solid #FF0000;">',
-             'row_alt_start' => '<tr style="background-color:#green">',
+             'row_alt_start' => '<tr style="background-color:green">',
              ];
          $table->setTemplate($template);
          
