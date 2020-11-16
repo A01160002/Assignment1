@@ -29,7 +29,7 @@ namespace App\Controllers;
          
          $template = [
              'table_open' => '<table cellpadding="10px">',
-             'cell_start' => '<td style="border: 5px solid #FF0000;">',
+             'cell_start' => '<td style="border: 5px solid pink;">',
              'row_alt_start' => '<tr style="background-color:yellow">',
              ];
          $table->setTemplate($template);
@@ -78,7 +78,7 @@ namespace App\Controllers;
       
          $template = [
              'table_open' => '<table cellpadding="10px">',
-             'cell_start' => '<td style="border: 5px solid #FF0000;">',
+             'cell_start' => '<td style="border: 5px solid blue;">',
              'row_alt_start' => '<tr style="background-color:green">',
              ];
          $table->setTemplate($template);
